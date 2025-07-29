@@ -1,7 +1,12 @@
+// Composants simples HTML à la place
+const Card = ({ children, ...props }) => (
+  <div className="rounded-xl bg-white p-4 shadow-md mb-4" {...props}>
+    {children}
+  </div>
+);
 
-import { useState } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+const CardContent = ({ children }) => <div>{children}</div>;
+
 
 const roadtripData = [
   {
